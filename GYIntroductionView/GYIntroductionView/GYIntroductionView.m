@@ -102,11 +102,11 @@ static NSString *GYIntroductionViewCellIdentifier = @"GYIntroductionViewCellIden
     return self;
 }
 
+
 #pragma mark- private
 - (void)setupIntroductionViews
 {
     CGRect fullFrame = CGRectMake(0, 0, GYINTROL_SCREENSIZE.width, GYINTROL_SCREENSIZE.height);
-    
     self.backgroundColor = [UIColor whiteColor];
     self.frame = fullFrame;
     
