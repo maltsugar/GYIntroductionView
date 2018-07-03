@@ -10,4 +10,4 @@ App 启动引导页 新特性介绍，App launch guide page Introduction to new 
 # demo
 ![](http://wx4.sinaimg.cn/mw690/72aba7efgy1fswqrtyvb5g208x0ga1gd.gif)
 
-![](http://wx4.sinaimg.cn/mw690/72aba7efgy1fswqo6tuslg208x0gakjm.gif)
+![](https://github.com/maltsugar/GYIntroductionView/blob/master/Untitled0.gif)
