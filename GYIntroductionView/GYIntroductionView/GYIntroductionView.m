@@ -63,17 +63,7 @@ static NSString *GYIntroductionViewCellIdentifier = @"GYIntroductionViewCellIden
 
 @implementation GYIntroductionView
 
-- (instancetype)initWithImgCount:(NSUInteger)count andDataSource:(id <GYIntroductionDataSource>)dataSource
-{
-    self = [super init];
-    if (self) {
-        self.dataSource = dataSource;
-        self.imgCount = count;
-        [self setupIntroductionViews];
-    }
-    return self;
-}
-- (instancetype)initWithImgNames:(NSArray <NSString *>*)imgNames bgImgNames:(NSArray *)bgNames
+- (instancetype)initWithImgNames:(NSArray <NSString *>*)imgNames bgImgNames:(NSArray <NSString *>*)bgNames
 {
     self = [super init];
     if (self) {
@@ -101,7 +91,16 @@ static NSString *GYIntroductionViewCellIdentifier = @"GYIntroductionViewCellIden
     return self;
 }
 
-
+- (instancetype)initWithImgCount:(NSUInteger)count andDataSource:(id <GYIntroductionDataSource>)dataSource
+{
+    self = [super init];
+    if (self) {
+        self.imgCount = count;
+        self.dataSource = dataSource;
+        [self setupIntroductionViews];
+    }
+    return self;
+}
 
 #pragma mark- private
 - (void)setupIntroductionViews

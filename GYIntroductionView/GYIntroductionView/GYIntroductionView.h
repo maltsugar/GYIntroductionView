@@ -55,7 +55,7 @@ typedef void(^GYEnterAction)(void);
  ===============================
  iPad               3:4
  */
-- (instancetype)initWithImgNames:(NSArray <NSString *>*)imgNames bgImgNames:(NSArray *)bgNames;
+- (instancetype)initWithImgNames:(NSArray <NSString *>*)imgNames bgImgNames:(NSArray <NSString *>*)bgNames;
 
 
 
