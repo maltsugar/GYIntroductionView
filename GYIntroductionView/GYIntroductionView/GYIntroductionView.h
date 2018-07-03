@@ -14,18 +14,19 @@
 @required
 - (__kindof UICollectionViewCell *)introductionView:(GYIntroductionView *)introductionView cellForItemAtIndex:(NSIndexPath *)indexPath;
 
-
 @end
 
 @protocol GYIntroductionDelegate <NSObject>
 
 @optional
 - (void)introductionViewDidClickEnterAction:(GYIntroductionView *)introductionView;
+- (void)introductionView:(GYIntroductionView *)introductionView didClickPageIndexPath:(NSIndexPath *)indexPath;
+
 
 @end
 
 
-typedef void(^GYEnterAction)();
+typedef void(^GYEnterAction)(void);
 
 @interface GYIntroductionView : UIView
 

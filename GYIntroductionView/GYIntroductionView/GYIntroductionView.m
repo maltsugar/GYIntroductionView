@@ -268,6 +268,14 @@ static NSString *GYIntroductionViewCellIdentifier = @"GYIntroductionViewCellIden
     }
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.delegate respondsToSelector:@selector(introductionView:didClickPageIndexPath:)]) {
+        [self.delegate introductionView:self didClickPageIndexPath:indexPath];
+    }
+}
+
+
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_enterButton) {

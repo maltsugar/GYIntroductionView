@@ -10,7 +10,7 @@
 #import "GYIntroductionView.h"
 #import "CustomIntroductionCell.h"
 
-@interface ViewController ()<GYIntroductionDataSource, CustomIntroductionCellDelegate>
+@interface ViewController ()<GYIntroductionDelegate, GYIntroductionDataSource, CustomIntroductionCellDelegate>
 
 @property (nonatomic, strong) NSArray *imgNames;
 
@@ -68,9 +68,23 @@
     introductionView.enterButton = enterBtn;
     
     [introductionView setEnterBlock:^{
-        NSLog(@"点击进入");
+        NSLog(@"block 点击进入");
     }];
+    
+    introductionView.delegate = self;
 }
+// GYIntroductionDelegate
+- (void)introductionViewDidClickEnterAction:(GYIntroductionView *)introductionView
+{
+    NSLog(@"代理回调 点击进入");
+}
+- (void)introductionView:(GYIntroductionView *)introductionView didClickPageIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%d", (int)indexPath.item);
+}
+
+
+
 
 
 - (void)example2
