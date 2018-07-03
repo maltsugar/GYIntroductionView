@@ -264,27 +264,23 @@ static NSString *GYIntroductionViewCellIdentifier = @"GYIntroductionViewCellIden
         NSString *imgName = self.imageNames[indexPath.item];
         cell.imgView.image = [UIImage imageNamed:imgName];
         
-        
-        if (_enterButton) {
-            
-            if (indexPath.item == self.imgCount - 1) {
-                // the last one
-                [cell.contentView addSubview:_enterButton];
-            }else
-            {
-                [_enterButton removeFromSuperview];
-            }
-        }
-        
-        
         return cell;
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_enterButton) {
+        if (indexPath.item == self.imgCount - 1) {
+            // the last one
+            [cell.contentView addSubview:_enterButton];
+        }
     }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     _lastContentOffsetX = scrollView.contentOffset.x;
-    [self.introlCollectionView reloadData];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
