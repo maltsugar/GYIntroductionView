@@ -76,7 +76,7 @@ App 启动引导页 新特性介绍，App launch guide page Introduction to new 
   s.author             = { "zgy" => "173678978@qq.com" }
   # Or just: s.author    = "zgy"
   # s.authors            = { "zgy" => "173678978@qq.com" }
-  s.social_media_url   = "https://weibo.com/u/1923852271?refer_flag=1005055010_&is_all=1"
+  # s.social_media_url   = "https://weibo.com/u/1923852271?refer_flag=1005055010_&is_all=1"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -84,8 +84,8 @@ App 启动引导页 新特性介绍，App launch guide page Introduction to new 
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  # s.platform     = :ios, "8.0"
+  # s.platform     = :ios
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "8.0"
