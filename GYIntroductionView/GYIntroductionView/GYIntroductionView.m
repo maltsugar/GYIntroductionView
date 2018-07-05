@@ -21,17 +21,18 @@
 
 @implementation GYIntroductionCell
 
-- (UIImageView *)imgView
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (nil == _imgView) {
+    self = [super initWithFrame:frame];
+    if (self) {
         _imgView = [[UIImageView alloc]init];
         _imgView.frame = self.bounds;
         _imgView.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:_imgView];
+        self.contentView.clipsToBounds = YES;
     }
-    return _imgView;
+    return self;
 }
-
 @end
 
 

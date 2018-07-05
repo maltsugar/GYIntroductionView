@@ -27,7 +27,7 @@
 
     // storyboard should delay 0.1s
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self example2];
+        [self example0];
     });
     
     
@@ -52,8 +52,11 @@
     [enterBtn setTitle:@"立即进入" forState:UIControlStateNormal];
     introductionView.enterButton = enterBtn;
     
+    __weak typeof(self) weakSelf = self;
     [introductionView setEnterBlock:^{
         NSLog(@"点击进入");
+        [weakSelf.introductionView removeFromSuperview];
+        weakSelf.introductionView = nil;
     }];
     
 }
