@@ -27,7 +27,7 @@
 
     // storyboard should delay 0.1s
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self example0];
+        [self example1];
     });
     
     
