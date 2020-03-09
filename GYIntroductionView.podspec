@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GYIntroductionView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "App 启动引导页 新特性介绍 支持灵活自定义每个页面，App launch guide page Introduction to new features, support flexible customization of each page"
 
   # This description is used to generate tags and improve search results.
@@ -100,7 +100,7 @@ App 启动引导页 新特性介绍，App launch guide page Introduction to new 
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/maltsugar/GYIntroductionView.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/maltsugar/GYIntroductionView.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -111,7 +111,7 @@ App 启动引导页 新特性介绍，App launch guide page Introduction to new 
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "GYIntroductionView", "GYIntroductionView/GYIntroductionView/**/*.{h,m}"
+  s.source_files  = "GYIntroductionView/GYIntroductionView/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
